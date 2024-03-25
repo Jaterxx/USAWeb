@@ -1,0 +1,40 @@
+<form action="/formprocess.html" method="post">
+
+<figure>
+  <img src="Israel\glyBwIh.gif" />
+</figure>
+    <p>Name:</p>
+    <p><input type="text" name="name" value="你的名字"></p>
+
+    <p>Email:</p>
+    <p><input name="species" type="text"></p>
+
+    <p>Comments: </p>
+    <p><textarea name="comments" rows="5" cols="20">你的留言</textarea></p>
+
+    <p>請問你最有興趣學習的美國景點是:</p>
+    <p><input type="radio" name="interest" value="LA"> 洛杉磯</p>
+    <p><input type="radio" name="interest" value="Gs"> 舊金山</p>
+    <p><input type="radio" name="interest" value="bos"> 波士頓</p>
+
+    <input class='popuptest' type="button" value="送出">
+    <p class='show'></p>
+
+    <script>
+        var button = document.querySelector('.popuptest');
+        var showtxt = document.querySelector('.show');
+
+        function popup2(e) {
+            window.confirm('確定送出?');
+            if (confirm('送出成功') == true) {
+                showtxt.innerHTML = 'Yes，送出成功';
+            } else {
+                showtxt.innerHTML = '您已取消確認';
+            }
+
+        };
+        button.addEventListener('click', popup2);
+    </script>
+	
+
+</form>
